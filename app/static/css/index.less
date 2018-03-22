@@ -1,0 +1,209 @@
+@backgrounColor: #ffffff;
+@headerHeight:50px;//头部高度
+@borderColor:#e8e9e8;
+@fontColor:rgba(0, 0, 0, 0.65);
+@fontColorHover:#1890ff;
+
+/**头部样式**/
+.header-out{
+	height: auto;
+	line-height: @headerHeight;
+	padding:0;
+
+	.cheader{
+		background-color: @backgrounColor;
+		height: @headerHeight;
+	    padding: 0 12px 0 0;
+	    -webkit-box-shadow: 0 1px 4px rgba(0,21,41,.08);
+	    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+	    position: relative;
+
+	    .logo{
+	    	font-size:16px;
+	    	font-weight: 600;
+	    	text-indent: 30px;
+	    }
+	}
+}
+
+
+/***中间样式***/
+.content-out{
+	.atm{
+
+		/******拖拽大小相关样式  start****/
+		display: flex;
+		flex-wrap: nowrap;
+
+		.reasizable-box{
+			display: inline-block;
+		    background: @backgrounColor;
+		    border: 1px solid @borderColor;
+		    text-align: center;
+		    padding: 10px;
+		    box-sizing: border-box;
+		    margin-bottom: 10px;
+		    overflow: hidden;
+		    position: relative;
+		    margin: 10px 0px 0px 10px;
+		}
+		.reasizable-left{
+		}
+		.react-resizable-handle{
+			position: absolute;
+		    width: 20px;
+		    height: 440px;
+		    top: 0;
+		    right: 0;
+		    background-position: bottom right;
+		    padding: 0 3px 3px 0;
+		    background-repeat: no-repeat;
+		    background-origin: content-box;
+		    -webkit-box-sizing: border-box;
+		    box-sizing: border-box;
+		    cursor: col-resize;
+		    border-right: 1px solid @backgrounColor;
+		    /* border-bottom: 1px solid #e8e9e8; */
+		}
+		/******拖拽大小相关样式  end****/
+		
+		.atm-search{
+			background-color: @backgrounColor;
+			margin:10px 10px 0px 10px;
+			overflow: hidden;
+			width: 100%;
+			.search-opts{
+				height:38px;
+				border-bottom:1px solid @borderColor;
+				text-align: right;
+				.opt-but{
+				    color: @fontColor;
+				    font-size: 12px;
+				    display: inline-block;
+				    margin-right:20px;
+				    cursor: pointer;
+				    margin-top: 11px;
+				}
+				.opt-but:hover{
+					color:@fontColorHover;
+				}
+			}
+			.search-content{
+				height:320px;
+			}
+		}
+		.atm-search-result{
+			padding:10px 10px 0px 10px;
+			overflow: hidden;
+			width: 100%;
+			.atm-search-content{
+				background-color: @backgrounColor;
+				width: 100%;
+			}
+		}
+		.atm-table{
+			background-color: @backgrounColor;
+			margin:10px;
+		}
+	}
+}
+
+.result{
+	margin:10px;
+	.result-tabs{
+		background-color: @backgrounColor;
+	}
+}
+
+.table-template{
+	font-size: 12px;
+	min-height: 450px;
+	.tip-con{
+	    padding: 10px 0px 0px 15px;
+	    margin:0px;
+	    color:@fontColor;
+	}
+}
+
+
+/*****左侧树样式*****/
+.dbtree{
+	border:1px solid @borderColor;
+	margin-top:10px;
+	height:380px;
+	font-size:13px;
+	overflow: auto;
+	ul{
+		list-style: none;
+		margin:0;
+		padding:0;
+		text-align: left;
+	}
+	li{
+		margin:3px 0px;
+	}
+	.dbtree-first{
+		padding:10px;
+		.dbtree-first-span{
+			width: 100%;
+			display: inline-block;
+			cursor: pointer;
+			.fa{
+				margin-right:6px;
+			}
+		}
+		.dbtree-second-ul{
+			padding-left:18px;
+			.dbtree-second-li{
+				input{
+					font-size:12px;
+				}
+				.dbtree-second-span{
+					width: 100%;
+					display: inline-block;
+					cursor: pointer;
+					.fa{
+						margin-right:6px;
+					}
+				}
+
+				.dbtree-third-ul{
+					padding-left:16px;
+					.dbtree-third-li{
+						.dbtree-third-span{
+							display: inline-block;
+							width: 100%;
+							cursor: pointer;
+							.fa{
+								margin-right:6px;
+							}
+						}
+						.dbtree-fourth-ul{
+							padding-left:26px;
+							.dbtree-fourth-li{
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//重写antd的样式
+.ant-btn{//按钮样式
+	font-size:12px;
+}
+.ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab{//tab标签样式
+	font-size:12px;
+}
+.ant-table{
+	font-size:12px;
+}
+.ant-tabs-bar{//
+	margin:0;
+}
+.ant-table{//表格字体大小
+	font-size:12px;
+}
